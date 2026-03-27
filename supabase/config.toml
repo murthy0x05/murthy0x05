@@ -1,0 +1,10 @@
+project_id = "bdpnzmbxuueohrcmnetv"
+
+[functions.ai-assistant]
+verify_jwt = false
+
+[functions.voice-transcribe]
+verify_jwt = false
+
+[functions.voice-speak]
+verify_jwt = false

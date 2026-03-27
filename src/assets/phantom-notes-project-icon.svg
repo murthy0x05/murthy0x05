@@ -1,0 +1,168 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" id="project-icon">
+            <defs>
+                <!-- Outer Glow Filter -->
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                
+                <!-- Heavy Glow -->
+                <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="12" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+
+                <!-- Drop Shadow -->
+                <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+                </filter>
+
+                <!-- Blueprint Grid Pattern -->
+                <pattern id="blueprint" width="32" height="32" patternUnits="userSpaceOnUse">
+                    <rect width="32" height="32" fill="none"/>
+                    <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-opacity="0.6"/>
+                    <circle cx="0" cy="0" r="1.5" fill="#334155"/>
+                </pattern>
+
+                <!-- Data Flow Paths (Hidden, used as tracks for animation) -->
+                <!-- Unstructured Input Paths (Wavy) -->
+                <path id="flow-in-1" d="M 160 230 C 185 200, 195 260, 222 236" fill="none"/>
+                <path id="flow-in-2" d="M 160 246 C 185 270, 195 220, 222 246" fill="none"/>
+                <path id="flow-in-3" d="M 160 262 C 185 290, 195 240, 222 256" fill="none"/>
+                
+                <!-- Structured Output Paths (Parallel & Straight) -->
+                <path id="flow-out-1" d="M 290 232 L 348 232" fill="none"/>
+                <path id="flow-out-2" d="M 290 252 L 348 252" fill="none"/>
+                <path id="flow-out-3" d="M 290 272 L 348 272" fill="none"/>
+            </defs>
+
+            <!-- Base App Icon Shape -->
+            <rect width="512" height="512" rx="112" fill="#0b1120"/>
+            <rect width="512" height="512" rx="112" fill="url(#blueprint)"/>
+            
+            <!-- Inner subtle border -->
+            <rect width="508" height="508" x="2" y="2" rx="110" fill="none" stroke="#1e293b" stroke-width="4"/>
+
+            <g filter="url(#shadow)">
+                
+                <!-- DATA TRACKS (Subtle background rails) -->
+                <g stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <use href="#flow-in-1"/>
+                    <use href="#flow-in-2"/>
+                    <use href="#flow-in-3"/>
+                    <use href="#flow-out-1"/>
+                    <use href="#flow-out-2"/>
+                    <use href="#flow-out-3"/>
+                </g>
+
+                <!-- STAGE 1: THE INTERACTIVE CHAT (Left) -->
+                <g>
+                    <!-- Chat Bubble Path -->
+                    <path d="M 70 222 A 16 16 0 0 1 86 206 L 144 206 A 16 16 0 0 1 160 222 L 160 270 A 16 16 0 0 1 144 286 L 105 286 L 80 305 L 90 286 L 86 286 A 16 16 0 0 1 70 270 Z" fill="#0f172a" stroke="#0ea5e9" stroke-width="4" stroke-linejoin="round" filter="url(#glow)"/>
+                    
+                    <!-- Terminal Prompt "From Scratch" Motif -->
+                    <g stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M 90 238 L 98 246 L 90 254" stroke-width="3"/>
+                        <path d="M 104 258 L 116 258" stroke-width="3">
+                            <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                    </g>
+                    <!-- Chat Lines -->
+                    <line x1="90" y1="226" x2="140" y2="226" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                    <line x1="124" y1="258" x2="140" y2="258" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                </g>
+
+                <!-- STAGE 3: THE STRUCTURED NOTES DOCUMENT (Right) -->
+                <g>
+                    <!-- Folded Document Base -->
+                    <path d="M 350 162 A 12 12 0 0 1 362 150 L 410 150 L 450 190 L 450 330 A 12 12 0 0 1 438 342 L 362 342 A 12 12 0 0 1 350 330 Z" fill="#0f172a" stroke="#10b981" stroke-width="4" stroke-linejoin="round" filter="url(#glow)"/>
+                    
+                    <!-- Document Fold -->
+                    <path d="M 410 150 L 410 178 A 12 12 0 0 0 422 190 L 450 190" fill="#0f172a" stroke="#10b981" stroke-width="4" stroke-linejoin="round"/>
+                    
+                    <!-- Document Header -->
+                    <rect x="366" y="196" width="60" height="6" rx="3" fill="#10b981" opacity="0.8"/>
+
+                    <!-- Structured Bullet Points (Aligning with outgoing data paths) -->
+                    <!-- Row 1 -->
+                    <circle cx="366" cy="232" r="3" fill="#10b981"/>
+                    <rect x="376" y="229" width="54" height="6" rx="3" fill="#10b981">
+                        <animate attributeName="opacity" values="0.3; 1; 0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+                    </rect>
+                    <!-- Row 2 -->
+                    <circle cx="366" cy="252" r="3" fill="#10b981"/>
+                    <rect x="376" y="249" width="40" height="6" rx="3" fill="#10b981">
+                        <animate attributeName="opacity" values="0.3; 1; 0.3" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
+                    </rect>
+                    <!-- Row 3 -->
+                    <circle cx="366" cy="272" r="3" fill="#10b981"/>
+                    <rect x="376" y="269" width="48" height="6" rx="3" fill="#10b981">
+                        <animate attributeName="opacity" values="0.3; 1; 0.3" dur="2.2s" repeatCount="indefinite" begin="1.5s"/>
+                    </rect>
+                    
+                    <!-- Extra lines -->
+                    <circle cx="366" cy="292" r="3" fill="#10b981" opacity="0.5"/>
+                    <rect x="376" y="289" width="30" height="6" rx="3" fill="#10b981" opacity="0.3"/>
+                </g>
+
+                <!-- STAGE 2: THE AI EXTRACTION ENGINE (Center) -->
+                <g>
+                    <!-- Outer Rotating Data Ring -->
+                    <circle cx="256" cy="246" r="44" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="8 8" opacity="0.8">
+                        <animateTransform attributeName="transform" type="rotate" from="0 256 246" to="360 256 246" dur="8s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="256" cy="246" r="44" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="2 12" opacity="0.6">
+                        <animateTransform attributeName="transform" type="rotate" from="360 256 246" to="0 256 246" dur="6s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <!-- Main AI Node Body -->
+                    <circle cx="256" cy="246" r="32" fill="#0f172a" stroke="#a855f7" stroke-width="4" filter="url(#glow-heavy)"/>
+                    
+                    <!-- Inner AI Sparkle/Core -->
+                    <path d="M 256 226 L 260 242 L 276 246 L 260 250 L 256 266 L 252 250 L 236 246 L 252 242 Z" fill="#d8b4fe" filter="url(#glow)">
+                        <animate attributeName="transform" type="scale" values="1; 1.2; 1" origin="256 246" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.8; 1; 0.8" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                </g>
+
+                <!-- ANIMATED DATA PACKETS (The Flow) -->
+                <g>
+                    <!-- Unstructured Data Flowing IN (Cyan packets on wavy paths) -->
+                    <circle r="4" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.8s" repeatCount="indefinite" begin="0s"><mpath href="#flow-in-1"/></animateMotion>
+                    </circle>
+                    <circle r="3" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.8s" repeatCount="indefinite" begin="0.9s"><mpath href="#flow-in-1"/></animateMotion>
+                    </circle>
+
+                    <circle r="4" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.5s" repeatCount="indefinite" begin="0.4s"><mpath href="#flow-in-2"/></animateMotion>
+                    </circle>
+                    
+                    <circle r="4" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="2s" repeatCount="indefinite" begin="0.2s"><mpath href="#flow-in-3"/></animateMotion>
+                    </circle>
+                    <circle r="3" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="2s" repeatCount="indefinite" begin="1.2s"><mpath href="#flow-in-3"/></animateMotion>
+                    </circle>
+
+                    <!-- Structured Data Flowing OUT (Emerald packets on parallel straight paths) -->
+                    <circle r="4" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#flow-out-1"/></animateMotion>
+                    </circle>
+                    
+                    <circle r="4" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" begin="0.1s"><mpath href="#flow-out-2"/></animateMotion>
+                    </circle>
+                    <circle r="3" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" begin="0.7s"><mpath href="#flow-out-2"/></animateMotion>
+                    </circle>
+
+                    <circle r="4" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" begin="0.8s"><mpath href="#flow-out-3"/></animateMotion>
+                    </circle>
+                </g>
+                
+            </g>
+        </svg>

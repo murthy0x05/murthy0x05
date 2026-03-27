@@ -1,0 +1,158 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" id="project-icon">
+            <defs>
+                <!-- Outer Glow Filter -->
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="8" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                
+                <!-- Heavy Outer Glow for Seeder -->
+                <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="12" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+
+                <!-- Drop Shadow -->
+                <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+                </filter>
+
+                <!-- Blueprint Grid Pattern -->
+                <pattern id="blueprint" width="32" height="32" patternUnits="userSpaceOnUse">
+                    <rect width="32" height="32" fill="none"/>
+                    <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-opacity="0.6"/>
+                    <circle cx="0" cy="0" r="1.5" fill="#334155"/>
+                </pattern>
+            </defs>
+
+            <!-- Base App Icon Shape -->
+            <rect width="512" height="512" rx="112" fill="#0b1120"/>
+            <rect width="512" height="512" rx="112" fill="url(#blueprint)"/>
+            
+            <!-- Inner subtle border -->
+            <rect width="508" height="508" x="2" y="2" rx="110" fill="none" stroke="#1e293b" stroke-width="4"/>
+
+            <g filter="url(#shadow)">
+                
+                <!-- THE P2P MESH CONNECTIONS (Behind the Nodes) -->
+                <!-- The "B" Shape Spines and Loops -->
+                <g stroke="#334155" stroke-width="4" stroke-linecap="round">
+                    <line x1="160" y1="110" x2="160" y2="256"/>
+                    <line x1="160" y1="256" x2="160" y2="402"/>
+                    
+                    <line x1="160" y1="110" x2="260" y2="110"/>
+                    <line x1="260" y1="110" x2="350" y2="183"/>
+                    <line x1="350" y1="183" x2="280" y2="256"/>
+                    <line x1="280" y1="256" x2="160" y2="256"/>
+                    
+                    <line x1="280" y1="256" x2="360" y2="329"/>
+                    <line x1="360" y1="329" x2="260" y2="402"/>
+                    <line x1="260" y1="402" x2="160" y2="402"/>
+                </g>
+
+                <!-- Cross-Mesh (Decentralized Links) -->
+                <g stroke="#334155" stroke-width="2" stroke-dasharray="6 6">
+                    <line x1="160" y1="110" x2="350" y2="183"/>
+                    <line x1="280" y1="256" x2="260" y2="110"/>
+                    <line x1="280" y1="256" x2="260" y2="402"/>
+                    <line x1="160" y1="402" x2="360" y2="329"/>
+                </g>
+
+                <!-- ANIMATED DATA PIECES (Chunks traveling the mesh) -->
+                <g>
+                    <!-- Seeder Pieces (Green) -->
+                    <!-- Path: N1 (Seeder) -> Terminal -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" path="M 160 110 L 160 256" begin="0s"/>
+                    </rect>
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" path="M 160 110 L 160 256" begin="0.6s"/>
+                    </rect>
+                    <!-- Path: N1 -> N4 -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1s" repeatCount="indefinite" path="M 160 110 L 260 110" begin="0.2s"/>
+                    </rect>
+                    <!-- Path: N1 -> N5 (Cross-mesh) -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#10b981" filter="url(#glow)">
+                        <animateMotion dur="1.5s" repeatCount="indefinite" path="M 160 110 L 350 183" begin="0.8s"/>
+                    </rect>
+
+                    <!-- Peer Swarm Pieces (Cyan) -->
+                    <!-- Path: N4 -> N5 -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.1s" repeatCount="indefinite" path="M 260 110 L 350 183" begin="0.1s"/>
+                    </rect>
+                    <!-- Path: N5 -> N6 -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="0.9s" repeatCount="indefinite" path="M 350 183 L 280 256" begin="0.4s"/>
+                    </rect>
+                    <!-- Path: N6 -> Terminal (Feeding the client) -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1s" repeatCount="indefinite" path="M 280 256 L 160 256" begin="0.3s"/>
+                    </rect>
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1s" repeatCount="indefinite" path="M 280 256 L 160 256" begin="0.8s"/>
+                    </rect>
+                    <!-- Path: N7 -> N6 -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.2s" repeatCount="indefinite" path="M 360 329 L 280 256" begin="0.5s"/>
+                    </rect>
+                    <!-- Path: N8 -> N7 -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.3s" repeatCount="indefinite" path="M 260 402 L 360 329" begin="0s"/>
+                    </rect>
+                    <!-- Path: N3 -> N8 -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1s" repeatCount="indefinite" path="M 160 402 L 260 402" begin="0.7s"/>
+                    </rect>
+                    <!-- Path: N3 -> Terminal (Spine up) -->
+                    <rect x="-4" y="-4" width="8" height="8" rx="2" fill="#0ea5e9" filter="url(#glow)">
+                        <animateMotion dur="1.4s" repeatCount="indefinite" path="M 160 402 L 160 256" begin="0.2s"/>
+                    </rect>
+                </g>
+
+                <!-- THE PEER NODES (Rendered on top to hide packet entry/exit points) -->
+                
+                <!-- Rotating Magnet/Seeking ring around Seeder -->
+                <g>
+                    <circle cx="160" cy="110" r="32" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="6 8" opacity="0.6">
+                        <animateTransform attributeName="transform" type="rotate" from="0 160 110" to="360 160 110" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+
+                <!-- N1 (The Original Seeder) -->
+                <circle cx="160" cy="110" r="20" fill="#10b981" filter="url(#glow-heavy)">
+                    <animate attributeName="r" values="19;22;19" dur="2s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- Normal Swarm Peers (Cyan borders) -->
+                <circle cx="260" cy="110" r="14" fill="#0f172a" stroke="#0ea5e9" stroke-width="4"/>
+                <circle cx="350" cy="183" r="14" fill="#0f172a" stroke="#0ea5e9" stroke-width="4"/>
+                <circle cx="280" cy="256" r="14" fill="#0f172a" stroke="#0ea5e9" stroke-width="4"/>
+                <circle cx="360" cy="329" r="14" fill="#0f172a" stroke="#0ea5e9" stroke-width="4"/>
+                <circle cx="260" cy="402" r="14" fill="#0f172a" stroke="#0ea5e9" stroke-width="4"/>
+                <circle cx="160" cy="402" r="14" fill="#0f172a" stroke="#0ea5e9" stroke-width="4"/>
+
+                <!-- Rotating Magnet/Seeking ring around a Leecher -->
+                <g>
+                    <circle cx="350" cy="183" r="26" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="4 6" opacity="0.8">
+                        <animateTransform attributeName="transform" type="rotate" from="360 350 183" to="0 350 183" dur="6s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+
+                <!-- THE "FROM SCRATCH" CLIENT NODE (Terminal at Center Pinch) -->
+                <rect x="115" y="232" width="90" height="48" rx="8" fill="#080c14" stroke="#a855f7" stroke-width="4" filter="url(#glow)"/>
+                
+                <!-- Terminal Prompt inside Active Block -->
+                <g stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Chevron > -->
+                    <path d="M 138 248 L 146 256 L 138 264" stroke-width="3"/>
+                    <!-- Blinking Cursor _ -->
+                    <path d="M 154 266 L 166 266" stroke-width="3">
+                        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+                    </path>
+                </g>
+
+            </g>
+        </svg>
