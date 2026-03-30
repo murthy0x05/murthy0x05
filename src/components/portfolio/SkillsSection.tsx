@@ -45,6 +45,10 @@ const skillCategories = [
     title: "Tools",
     skills: ["Docker", "Kubernetes", "Git", "GitHub", "Vercel", "Postman"],
   },
+  {
+    title: "Soft Skills",
+    skills: ["Leadership", "Collaboration", "Adaptability", "Communication", "Productivity", "Discipline", "Consistency"],
+  },
 ];
 
 const SkillsSection = () => {
