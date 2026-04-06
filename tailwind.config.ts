@@ -63,6 +63,11 @@ export default {
         "glow-green": "hsl(var(--glow-green))",
         "glow-blue": "hsl(var(--glow-blue))",
         "glow-purple": "hsl(var(--glow-purple))",
+        "terminal-prompt": "#22c55e",
+        "terminal-accent": "#6bff8f",
+        "terminal-text": "#adaaaa",
+        "terminal-link": "#699cff",
+        "terminal-link-hover": "#8ab0ff",
       },
       borderRadius: {
         lg: "var(--radius)",

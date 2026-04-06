@@ -128,4 +128,25 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(34, 197, 94, 0.15);
+    border-radius: 0;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 197, 94, 0.3);
+  }
+
+  .caret-terminal-accent {
+    caret-color: #6bff8f;
+  }
 }
