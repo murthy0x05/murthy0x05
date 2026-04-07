@@ -9,12 +9,14 @@ import ContactSection from "@/components/portfolio/ContactSection";
 import Footer from "@/components/portfolio/Footer";
 import FloatingBar from "@/components/portfolio/FloatingBar";
 import ThemeToggle from "@/components/portfolio/ThemeToggle";
+import CursorEffect from "@/components/portfolio/CursorEffect";
 
 const AIAssistant = lazy(() => import("@/components/portfolio/AIAssistantPanel"));
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background grid-bg pb-20">
+      <CursorEffect />
       <ThemeToggle />
       <HeroSection />
       <ProjectsSection />

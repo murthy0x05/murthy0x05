@@ -1,151 +1,213 @@
-import { useState, useRef, useCallback } from "react";
+import { useState } from "react";
 import { Github, Linkedin, TerminalSquare, FileText, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import TerminalModal from "./TerminalModal";
 import CVModal from "./CVModal";
 import SiLeetcode from "./icons/SiLeetcode";
 import SiKaggle from "./icons/SiKaggle";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+// ─── Brand colors per icon ───
 const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com/murthy0x05", custom: false },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/murthy0x05", custom: false },
-  { label: "LeetCode", href: "https://leetcode.com/u/murthy0x05", custom: true, CustomIcon: SiLeetcode },
-  { label: "Kaggle", href: "https://kaggle.com/murthy0x05", custom: true, CustomIcon: SiKaggle },
+  { icon: Github, label: "GitHub", href: "https://github.com/murthy0x05", custom: false, brandColor: "#e5e2e1" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/murthy0x05", custom: false, brandColor: "#0a66c2" },
+  { label: "LeetCode", href: "https://leetcode.com/u/murthy0x05", custom: true, CustomIcon: SiLeetcode, brandColor: "#ffa116" },
+  { label: "Kaggle", href: "https://kaggle.com/murthy0x05", custom: true, CustomIcon: SiKaggle, brandColor: "#20beff" },
 ];
 
-const DOCK_ICON_SIZE = 20;
-const BASE_SCALE = 1;
-const HOVER_SCALE = 1.35;
-const NEIGHBOR_SCALE = 1.15;
+const ICON_SIZE = 18;
 
 const FloatingBar = () => {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [cvModalOpen, setCvModalOpen] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredKey, setHoveredKey] = useState<string | null>(null);
   const isMobile = useIsMobile();
 
-  const getScale = useCallback(
-    (index: number) => {
-      if (isMobile || hoveredIndex === null) return BASE_SCALE;
-      const diff = Math.abs(index - hoveredIndex);
-      if (diff === 0) return HOVER_SCALE;
-      if (diff === 1) return NEIGHBOR_SCALE;
-      return BASE_SCALE;
-    },
-    [hoveredIndex, isMobile],
-  );
-
-  const getTranslateY = useCallback(
-    (index: number) => {
-      if (isMobile || hoveredIndex === null) return 0;
-      const diff = Math.abs(index - hoveredIndex);
-      if (diff === 0) return -6;
-      if (diff === 1) return -2;
-      return 0;
-    },
-    [hoveredIndex, isMobile],
-  );
-
-  // Total items: socials (0-3), CV (4), divider skipped, terminal (5)
-  const allItems = [
-    ...socials.map((s, i) => ({ type: "social" as const, index: i, ...s })),
-    { type: "cv" as const, index: socials.length },
+  // Build the item list with stable keys
+  const items = [
+    ...socials.map((s) => ({ type: "social" as const, key: s.label, ...s })),
+    { type: "cv" as const, key: "Resume", brandColor: "#22c55e" },
   ];
-
-  const terminalIndex = socials.length + 1;
 
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="fixed bottom-6 left-0 right-0 mx-auto w-fit z-50 gap-1 rounded-2xl px-4 py-2.5 flex-row flex items-center justify-center"
-        style={{
-          background: "rgba(0,0,0,0.55)",
-          backdropFilter: "blur(24px)",
-          WebkitBackdropFilter: "blur(24px)",
-          border: "1px solid rgba(255,255,255,0.1)",
-          boxShadow: "0 10px 40px rgba(0,0,0,0.6), 0 0 25px rgba(0,255,150,0.1)",
-        }}
-        onMouseLeave={() => setHoveredIndex(null)}
+        transition={{ duration: 0.6, delay: 0.8, ease: [0.23, 1, 0.32, 1] }}
+        className="fixed bottom-6 left-0 right-0 mx-auto w-fit z-50"
       >
-        {allItems.map((item) => {
-          const scale = getScale(item.index);
-          const ty = getTranslateY(item.index);
+        {/* Outer glow — animated border */}
+        <div className="relative p-[1px] rounded-2xl" style={{ overflow: "hidden" }}>
+          <div
+            className="absolute inset-0 rounded-2xl"
+            style={{
+              background:
+                "conic-gradient(from var(--border-angle, 0deg), transparent 40%, rgba(34,197,94,0.3) 50%, rgba(34,197,94,0.1) 60%, transparent 70%)",
+              animation: "rotateBorder 5s linear infinite",
+            }}
+          />
 
-          if (item.type === "social") {
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={item.label}
-                className="group relative p-3 rounded-xl text-white/70 hover:text-primary transition-colors"
-                style={{
-                  transform: `scale(${scale}) translateY(${ty}px)`,
-                  transition: "transform 200ms ease-out",
-                }}
-                onMouseEnter={() => setHoveredIndex(item.index)}
-              >
-                {item.custom ? <item.CustomIcon size={DOCK_ICON_SIZE} /> : <item.icon size={DOCK_ICON_SIZE} />}
-                <span className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-black/80 text-xs text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-sm">
-                  {item.label}
-                </span>
-              </a>
-            );
-          }
+          {/* ─── Bar body ─── */}
+          <div
+            className="relative rounded-[15px] px-2 py-1.5 flex items-center gap-0.5"
+            style={{
+              background: "rgba(14, 14, 14, 0.75)",
+              backdropFilter: "blur(28px)",
+              WebkitBackdropFilter: "blur(28px)",
+              boxShadow:
+                "0 8px 32px rgba(0,0,0,0.45), inset 0 0.5px 0 rgba(255,255,255,0.04), 0 0 40px rgba(34,197,94,0.03)",
+            }}
+            onMouseLeave={() => setHoveredKey(null)}
+          >
+            {/* ─── Icon items ─── */}
+            {items.map((item) => {
+              const isHovered = hoveredKey === item.key;
+              const brand = item.brandColor;
+              const glowRgb = hexToRgb(brand);
 
-          // CV button
-          return (
-            <button
-              key="cv"
-              onClick={() => setCvModalOpen(true)}
-              title="CV"
-              className="group relative p-3 rounded-xl text-white/70 hover:text-primary transition-colors"
+              if (item.type === "social") {
+                return (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cursor="interactive"
+                    className="relative flex items-center justify-center rounded-lg transition-all duration-200"
+                    style={{
+                      width: 40,
+                      height: 40,
+                      color: isHovered ? brand : "rgba(255,255,255,0.4)",
+                      background: isHovered ? `rgba(${glowRgb},0.1)` : "transparent",
+                      boxShadow: isHovered ? `0 0 14px rgba(${glowRgb},0.15), inset 0 0 8px rgba(${glowRgb},0.06)` : "none",
+                    }}
+                    onMouseEnter={() => setHoveredKey(item.key)}
+                  >
+                    {item.custom ? (
+                      <item.CustomIcon size={ICON_SIZE} />
+                    ) : (
+                      <item.icon size={ICON_SIZE} />
+                    )}
+
+                    {/* Tooltip */}
+                    <AnimatePresence>
+                      {isHovered && (
+                        <motion.span
+                          initial={{ opacity: 0, y: 4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 4 }}
+                          transition={{ duration: 0.12 }}
+                          className="absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-md text-[10px] font-medium whitespace-nowrap pointer-events-none"
+                          style={{
+                            background: "rgba(14,14,14,0.9)",
+                            color: "rgba(229,226,225,0.85)",
+                            border: "1px solid rgba(255,255,255,0.06)",
+                            backdropFilter: "blur(8px)",
+                          }}
+                        >
+                          {item.label}
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </a>
+                );
+              }
+
+              // CV / Resume button
+              return (
+                <button
+                  key={item.key}
+                  onClick={() => setCvModalOpen(true)}
+                  data-cursor="interactive"
+                  className="relative flex items-center justify-center rounded-lg transition-all duration-200"
+                  style={{
+                    width: 40,
+                    height: 40,
+                    color: isHovered ? brand : "rgba(255,255,255,0.4)",
+                    background: isHovered ? `rgba(${glowRgb},0.1)` : "transparent",
+                    boxShadow: isHovered ? `0 0 14px rgba(${glowRgb},0.15), inset 0 0 8px rgba(${glowRgb},0.06)` : "none",
+                  }}
+                  onMouseEnter={() => setHoveredKey(item.key)}
+                >
+                  <FileText size={ICON_SIZE} />
+                  <AnimatePresence>
+                    {isHovered && (
+                      <motion.span
+                        initial={{ opacity: 0, y: 4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 4 }}
+                        transition={{ duration: 0.12 }}
+                        className="absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-md text-[10px] font-medium whitespace-nowrap pointer-events-none"
+                        style={{
+                          background: "rgba(14,14,14,0.9)",
+                          color: "rgba(229,226,225,0.85)",
+                          border: "1px solid rgba(255,255,255,0.06)",
+                          backdropFilter: "blur(8px)",
+                        }}
+                      >
+                        Resume
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </button>
+              );
+            })}
+
+            {/* ─── Divider ─── */}
+            <div
+              className="mx-1 self-center"
               style={{
-                transform: `scale(${scale}) translateY(${ty}px)`,
-                transition: "transform 200ms ease-out",
+                width: 1,
+                height: 20,
+                background: "linear-gradient(to bottom, transparent, rgba(255,255,255,0.08), transparent)",
               }}
-              onMouseEnter={() => setHoveredIndex(item.index)}
+            />
+
+            {/* ─── Terminal ─── */}
+            <button
+              onClick={() => setTerminalOpen(true)}
+              data-cursor="interactive"
+              className="relative flex items-center gap-2 px-3.5 py-2 rounded-lg font-mono text-xs transition-all duration-200"
+              style={{
+                color: "#4be277",
+                background: hoveredKey === "terminal" ? "rgba(34,197,94,0.12)" : "rgba(34,197,94,0.05)",
+                border: hoveredKey === "terminal" ? "1px solid rgba(34,197,94,0.3)" : "1px solid rgba(34,197,94,0.1)",
+                boxShadow: hoveredKey === "terminal" ? "0 0 16px rgba(34,197,94,0.1)" : "none",
+              }}
+              onMouseEnter={() => setHoveredKey("terminal")}
             >
-              <FileText size={DOCK_ICON_SIZE} />
-              <span className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-black/80 text-xs text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none backdrop-blur-sm">
-                CV
+              <TerminalSquare size={16} />
+              <span className="hidden sm:inline">Terminal</span>
+              {/* Pulsing status dot */}
+              <span className="relative flex h-1.5 w-1.5">
+                <span
+                  className="absolute inline-flex h-full w-full rounded-full opacity-75"
+                  style={{
+                    background: "#22c55e",
+                    animation: "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+                  }}
+                />
+                <span
+                  className="relative inline-flex rounded-full h-1.5 w-1.5"
+                  style={{ background: "#22c55e" }}
+                />
               </span>
             </button>
-          );
-        })}
 
-        {/* Divider */}
-        <div className="w-px h-6 bg-white/15 mx-1 self-center" />
-
-        {/* Terminal */}
-        <button
-          onClick={() => setTerminalOpen(true)}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-primary bg-primary/10 hover:bg-primary/20 border border-primary/20 hover:border-primary/40 transition-all font-mono text-sm"
-          style={{
-            transform: `scale(${getScale(terminalIndex)}) translateY(${getTranslateY(terminalIndex)}px)`,
-            transition: "transform 200ms ease-out",
-          }}
-          onMouseEnter={() => setHoveredIndex(terminalIndex)}
-        >
-          <TerminalSquare size={18} />
-          <span className="hidden sm:inline">Terminal</span>
-        </button>
-
-        {/* AI Assistant – mobile only */}
-        {isMobile && (
-          <button
-            onClick={() => window.dispatchEvent(new CustomEvent("toggle-ai-assistant"))}
-            title="AI Assistant"
-            className="p-3 rounded-xl text-white/70 hover:text-primary transition-colors"
-          >
-            <Sparkles size={DOCK_ICON_SIZE} />
-          </button>
-        )}
+            {/* AI Assistant – mobile only */}
+            {isMobile && (
+              <button
+                onClick={() => window.dispatchEvent(new CustomEvent("toggle-ai-assistant"))}
+                title="AI Assistant"
+                className="flex items-center justify-center rounded-lg transition-colors"
+                style={{ width: 40, height: 40, color: "rgba(255,255,255,0.4)" }}
+              >
+                <Sparkles size={ICON_SIZE} />
+              </button>
+            )}
+          </div>
+        </div>
       </motion.div>
 
       <TerminalModal isOpen={terminalOpen} onClose={() => setTerminalOpen(false)} />
@@ -153,5 +215,13 @@ const FloatingBar = () => {
     </>
   );
 };
+
+// ─── Utility: hex → "r,g,b" string for rgba() ───
+function hexToRgb(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `${r},${g},${b}`;
+}
 
 export default FloatingBar;
