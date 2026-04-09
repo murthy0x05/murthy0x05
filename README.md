@@ -193,11 +193,15 @@ TensorFlow/Keras CNN with full preprocessing, tuning, and a deployed live predic
 
 ## `> education`
 
+<div align="center">
+
 | Degree | Institution | Year | Score |
 |--------|-------------|------|-------|
 | B.Tech CSE-AIML | Lovely Professional University | 2023 – Present | **9.38 CGPA** |
 | Class XII · BIEAP | Narayana Junior College | 2021 – 2023 | **98.1%** |
 | Class X · BSEAP | Narayana Group of Schools | 2020 – 2021 | **99%** |
+
+</div>
 
 ---
 
