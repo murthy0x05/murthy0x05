@@ -73,7 +73,7 @@ const FloatingBar = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    data-cursor="interactive"
+
                     className="relative flex items-center justify-center rounded-lg transition-all duration-200"
                     style={{
                       width: 40,
