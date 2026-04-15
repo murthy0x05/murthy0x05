@@ -52,7 +52,7 @@ const CVModal = ({ isOpen, onClose }: CVModalProps) => {
             transition={{ type: "spring", damping: 28, stiffness: 320 }}
             className={`relative flex flex-col overflow-hidden ${
               isFullscreen
-                ? "w-full h-full rounded-none"
+                ? "w-full h-full rounded-xl"
                 : "w-full max-w-4xl h-[85vh] sm:h-[88vh] max-sm:h-full max-sm:max-w-full max-sm:rounded-none rounded-2xl"
             }`}
             style={{
