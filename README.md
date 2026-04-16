@@ -15,9 +15,9 @@
 [![Portfolio](https://img.shields.io/badge/-%20murthy0x05.me-111?style=flat-square&logo=vercel&logoColor=white)](https://murthy0x05.me)
 [![LeetCode](https://img.shields.io/badge/-%20LeetCode%201609-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/murthy0x05)
 [![CodeChef](https://img.shields.io/badge/-%20CodeChef%201605-5B4638?style=flat-square&logo=codechef&logoColor=white)](https://codechef.com/users/murthy0x05)
-[![Codeforces](https://img.shields.io/badge/-%20Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)](https://codeforces.com/profile/murthy0x05)
+[![Codeforces](https://img.shields.io/badge/-%20Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)](https://codeforces.com/profile/murthy1e9)
 [![Kaggle](https://img.shields.io/badge/-%20Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://kaggle.com/murthy0x05)
-[![AtCoder](https://img.shields.io/badge/-%20AtCoder-222?style=flat-square&logo=atcoder&logoColor=white)](https://atcoder.jp/users/murthy0x05)
+[![AtCoder](https://img.shields.io/badge/-%20AtCoder-222?style=flat-square&logo=atcoder&logoColor=white)](https://atcoder.jp/users/murthy1e9)
 
 </div>
 
