@@ -12,7 +12,7 @@
 ### `murthy0x05` · AI/ML Engineer · Systems Builder · Competitive Programmer
 
 [![LinkedIn](https://img.shields.io/badge/-%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/murthy0x05)
-[![Portfolio]([https://img.shields.io/badge/-%20murthy0x05.me-111?style=flat-square&logo=vercel&logoColor=white](https://img.shields.io/badge/-%20murthy0x05.me-111?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTIiLz48cGF0aCBkPSJNMTIgMmExNS4zIDE1LjMgMCAwIDEgNCAxMCAxNS4zIDE1LjMgMCAwIDEtNCAxMCAxNS4zIDE1LjMgMCAwIDEtNC0xMCAxNS4zIDE1LjMgMCAwIDEgNC0xMHoiLz48L3N2Zz4=))](https://murthy0x05.me)
+[![Portfolio](https://img.shields.io/badge/🌐%20murthy0x05.me-111?style=flat-square)](https://murthy0x05.me)
 [![LeetCode](https://img.shields.io/badge/-%20LeetCode%201609-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/murthy0x05)
 [![CodeChef](https://img.shields.io/badge/-%20CodeChef%201605-5B4638?style=flat-square&logo=codechef&logoColor=white)](https://codechef.com/users/murthy0x05)
 [![Codeforces](https://img.shields.io/badge/-%20Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)](https://codeforces.com/profile/murthy1e9)
