@@ -20,6 +20,7 @@
 [![AtCoder](https://img.shields.io/badge/-%20AtCoder-222?style=flat-square&logo=atcoder&logoColor=white)](https://atcoder.jp/users/murthy1e9)
 
 </div>
+![Neofetch Stats](https://neofetch-profile.vercel.app/api?username=murthy0x05)
 
 ---
 
