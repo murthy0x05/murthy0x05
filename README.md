@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Neofetch Stats](https://neofetch-profile.vercel.app/api?username=murthy0x05)
+![Neofetch Stats](https://neofetch-profile.vercel.app/api?username=murthy0x05)
 
 </div>
 
