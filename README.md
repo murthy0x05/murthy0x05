@@ -5,15 +5,13 @@
 
 ### Competitive Programmer | AI/ML Engineer | Systems Builder | Artist
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/murthy0x05)
-[![Portfolio](https://img.shields.io/badge/murthy0x05.me-000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://murthy0x05.me)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:murthy0x05@gmail.com)
-[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://kaggle.com/murthy0x05)
-
-[![LeetCode](https://img.shields.io/badge/LeetCode_·_1609-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/murthy0x05)
-[![CodeChef](https://img.shields.io/badge/CodeChef_·_1605-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://codechef.com/users/murthy0x05)
-[![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/murthy1e9)
-[![AtCoder](https://img.shields.io/badge/AtCoder-222?style=for-the-badge&logo=atcoder&logoColor=white)](https://atcoder.jp/users/murthy1e9)
+[![LinkedIn](https://img.shields.io/badge/-%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/murthy0x05)
+[![Portfolio](https://img.shields.io/badge/🌐%20murthy0x05.me-111?style=flat-square)](https://murthy0x05.me)
+[![LeetCode](https://img.shields.io/badge/-%20LeetCode%201609-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/murthy0x05)
+[![CodeChef](https://img.shields.io/badge/-%20CodeChef%201605-5B4638?style=flat-square&logo=codechef&logoColor=white)](https://codechef.com/users/murthy0x05)
+[![Codeforces](https://img.shields.io/badge/-%20Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)](https://codeforces.com/profile/murthy1e9)
+[![Kaggle](https://img.shields.io/badge/-%20Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://kaggle.com/murthy0x05)
+[![AtCoder](https://img.shields.io/badge/-%20AtCoder-222?style=flat-square&logo=atcoder&logoColor=white)](https://atcoder.jp/users/murthy1e9)
 </div>
 
 
