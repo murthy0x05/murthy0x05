@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src=".github/assets/name-banner.svg" alt="PAVAN KUMAR" width="100%" />
+<img src=".github/assets/name-banner.svg" alt="PAVAN KUMAR" />
 
 
 ### `murthy0x05` · AI/ML Engineer · Systems Builder · Competitive Programmer
