@@ -18,9 +18,6 @@ import {
 } from "lucide-react";
 import { SiDiscord } from "./icons/SiDiscord";
 import kafkaIcon from "@/assets/kafka-project-icon.svg";
-import torrentIcon from "@/assets/bittorrent-project-icon.svg";
-import creditRiskIcon from "@/assets/ml-credit-risk-project-icon.svg";
-import phantomNotesIcon from "@/assets/phantom-notes-project-icon.svg";
 
 const projects: {
   name: string;
@@ -31,73 +28,67 @@ const projects: {
   metrics?: { icon: React.ElementType; label: string }[];
 }[] = [
     {
-      name: "KafkaX",
+      name: "Yntern",
+      icon: "🤖",
+      description:
+        "Engineered an end-to-end AI agent for automated candidate discovery, matching, and engagement, integrating semantic search and conversational outreach simulations.",
+      impact: "Reduces manual screening effort by 38% and generates ranked shortlists, maintaining privacy via a Trusted Execution Environment.",
+      links: {
+        github: "https://github.com/murthy0x05",
+        demo: "https://huggingface.co/murthy0x05",
+      },
+      metrics: [
+        { icon: Code, label: "Python" },
+        { icon: Brain, label: "LLMs & LangChain" },
+        { icon: Database, label: "Vector DB" },
+      ],
+    },
+    {
+      name: "KudosDev",
+      icon: "🏆",
+      description:
+        "Spearheaded a full-stack platform enabling developers to showcase achievements, earn peer recognition, and establish verifiable professional identities.",
+      impact: "Facilitates developer engagement and seamless user experiences across a scalable PostgreSQL-backed architecture.",
+      links: {
+        github: "https://github.com/murthy0x05",
+        demo: "https://murthy0x05.me",
+      },
+      metrics: [
+        { icon: Code, label: "React & TypeScript" },
+        { icon: Cpu, label: "Node.js" },
+        { icon: Database, label: "PostgreSQL" },
+      ],
+    },
+    {
+      name: "RichPerson",
+      icon: "🎙️",
+      description:
+        "Designed a voice chatbot pipeline combining STT, Wav2Vec2-based ASR, LLM inference, and TTS for low-latency Hindi conversations.",
+      impact: "Reduces phoneme error rate by approx. 18% and maintains ~99.9% availability through a dual-LLM fallback strategy.",
+      links: {
+        github: "https://github.com/murthy0x05",
+        demo: "https://huggingface.co/murthy0x05",
+      },
+      metrics: [
+        { icon: Code, label: "Python" },
+        { icon: Brain, label: "Wav2Vec2 & LLM" },
+        { icon: Zap, label: "Real-time Inference" },
+      ],
+    },
+    {
+      name: "ApacheX",
       icon: kafkaIcon,
       description:
-        "Engineered a Kafka-inspired event streaming platform in Java, replicating core components like brokers, producers, and consumers.",
-      impact: "Built a Kafka-like system from scratch to enable real-time, scalable data streaming.",
+        "Crafted a distributed messaging system inspired by Apache Kafka, supporting producer-consumer communication, topic management, and persistent storage.",
+      impact: "Achieved 35–40% higher throughput than a baseline socket-based queue through protocol-level and storage optimizations.",
       links: {
-        linkedin: "https://www.linkedin.com/in/murthy0x05/",
         github: "https://github.com/murthy0x05/apache-kafka-using-kafka-protocol",
         demo: "https://github.com/murthy0x05",
       },
       metrics: [
         { icon: Code, label: "Java LLD" },
-        { icon: Database, label: "Kafka Protocol" },
-        { icon: Zap, label: "Reduced Latency" },
-      ],
-    },
-    {
-      name: "TorrentX",
-      icon: torrentIcon,
-      description:
-        "Implemented a peer-to-peer file sharing protocol inspired by BitTorrent in Java, enabling decentralized file transfer between multiple nodes.",
-      impact: "Eliminates reliance on centralized servers by enabling efficient, distributed file sharing across peers.",
-      links: {
-        linkedin: "https://www.linkedin.com/in/murthy0x05/",
-        github: "https://github.com/murthy0x05/apache-kafka-using-kafka-protocol",
-        demo: "https://github.com/murthy0x05",
-      },
-      metrics: [
-        { icon: Network, label: "P2P System" },
-        { icon: ArrowLeftRight, label: "Chunk Transfer" },
-        { icon: Cpu, label: "Custom Protocol" },
-        { icon: Zap, label: "Parallel Sync" },
-      ],
-    },
-    {
-      name: "Credit Risk Analyzer",
-      icon: creditRiskIcon,
-      description:
-        "Developed a machine learning model to assess credit risk by analyzing financial and behavioral customer data.",
-      impact: "Helps predict loan defaults and supports better financial decision-making using data-driven insights.",
-      links: {
-        linkedin: "https://www.linkedin.com/in/murthy0x05/",
-        github: "https://github.com/murthy0x05/apache-kafka-using-kafka-protocol",
-        demo: "https://github.com/murthy0x05",
-      },
-      metrics: [
-        { icon: Brain, label: "ML Model" },
-        { icon: Database, label: "Data Analysis" },
-        { icon: LineChart, label: "Risk Prediction" },
-      ],
-    },
-    {
-      name: "Phantom Notes",
-      icon: phantomNotesIcon,
-      description:
-        "Built an AI-powered chatbot that enables interactive learning while automatically generating structured notes from conversations for future reference.",
-      impact:
-        "Enhances learning efficiency by combining real-time interaction with persistent, AI-generated knowledge retention.",
-      links: {
-        linkedin: "https://www.linkedin.com/in/murthy0x05/",
-        github: "https://github.com/murthy0x05/apache-kafka-using-kafka-protocol",
-        demo: "https://github.com/murthy0x05",
-      },
-      metrics: [
-        { icon: Brain, label: "LLM Chat" },
-        { icon: FileText, label: "Auto Notes" },
-        { icon: Zap, label: "Real-time Learning" },
+        { icon: Network, label: "Distributed Systems" },
+        { icon: ArrowLeftRight, label: "TCP Sockets" },
       ],
     },
   ];
