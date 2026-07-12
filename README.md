@@ -3,7 +3,7 @@
 <img src=".github/assets/name-banner.svg" alt="PAVAN KUMAR" width="100%" />
 
 
-· Competitive Programmer · AI/ML Engineer · Systems Builder · Open Source Contributor · Artist
+### · Competitive Programmer · AI/ML Engineer · Systems Builder · Artist
 
 [![LinkedIn](https://img.shields.io/badge/-%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/murthy0x05)
 [![Portfolio](https://img.shields.io/badge/🌐%20murthy0x05.me-111?style=flat-square)](https://murthy0x05.me)
