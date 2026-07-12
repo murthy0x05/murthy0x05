@@ -12,6 +12,7 @@
 [![Codeforces](https://img.shields.io/badge/-%20Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)](https://codeforces.com/profile/murthy1e9)
 [![Kaggle](https://img.shields.io/badge/-%20Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://kaggle.com/murthy0x05)
 [![AtCoder](https://img.shields.io/badge/-%20AtCoder-222?style=flat-square&logo=atcoder&logoColor=white)](https://atcoder.jp/users/murthy1e9)
+[![GeeksforGeeks](https://img.shields.io/badge/-%20GeeksforGeeks-2F8D46?style=flat-square&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/user/murthy0x05)
 </div>
 
 
