@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src=".github/assets/name-banner.svg" alt="PAVAN KUMAR" />
+<img src=".github/assets/name-banner.svg" alt="PAVAN KUMAR" width="100%" />
 
 
-### `murthy0x05` · AI/ML Engineer · Systems Builder · Competitive Programmer
+· Competitive Programmer · AI/ML Engineer · Systems Builder · Open Source Contributor · Artist
 
 [![LinkedIn](https://img.shields.io/badge/-%20LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/murthy0x05)
 [![Portfolio](https://img.shields.io/badge/🌐%20murthy0x05.me-111?style=flat-square)](https://murthy0x05.me)
@@ -135,33 +135,6 @@ TensorFlow/Keras CNN with full preprocessing, tuning, and a deployed live predic
 
 ---
 
-## `> stats`
-
-<div align="center">
-
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=murthy0x05&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=1d9e75&text_color=8b949e&include_all_commits=true&count_private=true"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=murthy0x05&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e&langs_count=8"/>
-
-</div>
-
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=murthy0x05&theme=github-dark-blue&hide_border=true&background=0D1117&ring=1d9e75&fire=fac775&currStreakLabel=58a6ff)](https://git.io/streak-stats)
-
-</div>
-
----
-
-## `> contribution graph`
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=murthy0x05&bg_color=0d1117&color=58a6ff&line=1d9e75&point=fac775&area=true&hide_border=true&area_color=1d9e7530)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
 ## `> competitive programming`
 
 <div align="center">
@@ -207,7 +180,7 @@ TensorFlow/Keras CNN with full preprocessing, tuning, and a deployed live predic
 
 ```
 discipline is choosing between what you want now and what you want most.
-485 days. still choosing.
+600 days. still choosing.
 ```
 
 </div>
