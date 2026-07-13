@@ -23,10 +23,10 @@
       .art { fill: url(#grad-light); }
     }
   </style>
-  <text class="art" xml:space="preserve"><tspan x="5" y="16" textLength="680" lengthAdjust="spacingAndGlyphs">██████╗  █████╗ ██╗   ██╗ █████╗ ███╗   ██╗    ██╗  ██╗██╗   ██╗███╗   ███╗ █████╗ ██████╗ </tspan>
-<tspan x="5" y="34" textLength="680" lengthAdjust="spacingAndGlyphs">██╔══██╗██╔══██╗██║   ██║██╔══██╗████╗  ██║    ██║ ██╔╝██║   ██║████╗ ████║██╔══██╗██╔══██╗</tspan>
-<tspan x="5" y="52" textLength="680" lengthAdjust="spacingAndGlyphs">██████╔╝███████║██║   ██║███████║██╔██╗ ██║    █████╔╝ ██║   ██║██╔████╔██║███████║██████╔╝</tspan>
-<tspan x="5" y="70" textLength="680" lengthAdjust="spacingAndGlyphs">██╔═══╝ ██╔══██║╚██╗ ██╔╝██╔══██║██║╚██╗██║    ██╔═██╗ ██║   ██║██║╚██╔╝██║██╔══██║██╔══██╗</tspan>
-<tspan x="5" y="88" textLength="680" lengthAdjust="spacingAndGlyphs">██║     ██║  ██║ ╚████╔╝ ██║  ██║██║ ╚████║    ██║  ██╗╚██████╔╝██║ ╚═╝ ██║██║  ██║██║  ██║</tspan>
-<tspan x="5" y="106" textLength="680" lengthAdjust="spacingAndGlyphs">╚═╝     ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝</tspan></text>
+  <text class="art" xml:space="preserve"><tspan x="5" y="16" textLength="680" lengthAdjust="spacing">██████╗  █████╗ ██╗   ██╗ █████╗ ███╗   ██╗    ██╗  ██╗██╗   ██╗███╗   ███╗ █████╗ ██████╗ </tspan>
+<tspan x="5" y="34" textLength="680" lengthAdjust="spacing">██╔══██╗██╔══██╗██║   ██║██╔══██╗████╗  ██║    ██║ ██╔╝██║   ██║████╗ ████║██╔══██╗██╔══██╗</tspan>
+<tspan x="5" y="52" textLength="680" lengthAdjust="spacing">██████╔╝███████║██║   ██║███████║██╔██╗ ██║    █████╔╝ ██║   ██║██╔████╔██║███████║██████╔╝</tspan>
+<tspan x="5" y="70" textLength="680" lengthAdjust="spacing">██╔═══╝ ██╔══██║╚██╗ ██╔╝██╔══██║██║╚██╗██║    ██╔═██╗ ██║   ██║██║╚██╔╝██║██╔══██║██╔══██╗</tspan>
+<tspan x="5" y="88" textLength="680" lengthAdjust="spacing">██║     ██║  ██║ ╚████╔╝ ██║  ██║██║ ╚████║    ██║  ██╗╚██████╔╝██║ ╚═╝ ██║██║  ██║██║  ██║</tspan>
+<tspan x="5" y="106" textLength="680" lengthAdjust="spacing">╚═╝     ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝</tspan></text>
 </svg>
